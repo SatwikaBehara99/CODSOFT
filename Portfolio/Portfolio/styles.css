@@ -1,0 +1,199 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e3f2fd; /* Light Blue Background */
+    color: #333;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+/* Header & Navigation */
+header {
+    background: #0a192f; /* Dark Blue */
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #64ffda; /* Neon Green */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff9f43; /* Orange */
+}
+
+/* Full-Page Sections */
+section {
+    height: 100vh; /* Each section takes full screen height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    padding: 50px 20px;
+}
+
+/* Section Backgrounds with Gradients */
+#about {
+    background: linear-gradient(to right, #3a6073, #16222a); /* Dark Blue Gradient */
+    color: white;
+}
+
+#skills {
+    background: linear-gradient(to right, #ff9f43, #ff6b6b); /* Orange-Red */
+    color: white;
+}
+
+#projects {
+    background: linear-gradient(to right, #3b5998, #192f60); /* Deep Blue */
+    color: white;
+}
+
+#certifications {
+    background: linear-gradient(to right, #009ffd, #2a2a72); /* Blue */
+    color: white;
+}
+
+#resume {
+    background: linear-gradient(to right, #00b09b, #96c93d); /* Green */
+    color: white;
+}
+
+#contact {
+    background: linear-gradient(to right, #662d8c, #ed1e79); /* Purple-Pink */
+    color: white;
+}
+
+/* Section Headings - Centered at Top */
+section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: white;
+    position: absolute;
+    top: 15%;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* Active Section (Sliding Effect) */
+.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Skills - Grid Layout */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.skills-container div {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    padding: 12px 18px;
+    margin: 10px;
+    border-radius: 5px;
+    transition: transform 0.3s ease, background 0.3s;
+}
+
+.skills-container div:hover {
+    transform: scale(1.1);
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Projects */
+.project {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s, background 0.3s;
+}
+
+.project:hover {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Certifications */
+.certifications-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.certifications-container div {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, background 0.3s;
+}
+
+.certifications-container div:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Resume */
+#resume a {
+    background: #64ffda; /* Neon Green */
+    color: #0a192f; /* Dark Blue */
+    padding: 12px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s, color 0.3s;
+}
+
+#resume a:hover {
+    background: #ff9f43;
+    color: white;
+}
+
+/* Contact Section - Email White */
+#contact a {
+    color: white !important; /* Email is White */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+#contact a:hover {
+    color: #ff9f43; /* Changes to Orange on Hover */
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #0a192f;
+    color: #64ffda;
+}
